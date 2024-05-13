@@ -100,6 +100,23 @@ local furnitures = {
 			}
 		end
 	},
+	["toilet"] = {
+		description = "Toilet",
+		sitting = true,
+		nodebox = {
+			{ -0.3, -0.1, -0.3, 0.3, 0, 0.2 }, -- seating
+			{ -0.2, -0.5, -0.2, 0.2, -0.1, 0.2 }, -- bowl
+			{ -0.2, -0.5, 0.2, 0.2, 0.4, 0.33 }, -- conector 1-2
+			{ -0.33, 0.1, 0.2, 0.33, 0.4, 0.4 } -- sistern
+		},
+		craft = function(recipe)
+			return {
+				{ "", "group:stick" },
+				{ recipe, recipe },
+				{ "", "group:stick" }
+			}
+		end
+	},
 	["table"] = {
 		description = "Table",
 		nodebox = {
