@@ -117,6 +117,23 @@ local furnitures = {
 			}
 		end
 	},
+	["sink"] = {
+		description = "Sink",
+		nodebox = {
+		-- -0.5 is the front, 0.5 is the back, -0.5 is the bottom, 0.5 is the top
+		-- side coord, bottom coord, front coord, side coord, top coord, back coord
+			{ -0.3, 0.2, 0.0, 0.3, 0.4, 0.5 }, -- bowl outer
+			{ -0.2, 0.2, 0.1, 0.2, 0.4, 0.4 }, -- bowl inner
+			{ -0.2,-0.5, 0.3, 0.2, 0.4, 0.5 } -- stand
+		},
+		craft = function(recipe)
+			return {
+				{ recipe, recipe },
+				{ "", "group:stick" },
+				{ "", "group:stick" }
+			}
+		end
+	},
 	["table"] = {
 		description = "Table",
 		nodebox = {
